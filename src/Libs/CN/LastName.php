@@ -6,17 +6,33 @@ namespace Tragedy\Mutherfocker\Libs\CN;
 class LastName
 {
     protected static ?LastName $instance = null;
+    protected int $lastNamesLength;
 
 
     public static function getInstance(): LastName
     {
         if (static::$instance === null) {
             static::$instance = new static();
+            static::getInstance()->lastNamesLength = count(static::getInstance()->lastNames);
         }
         return static::$instance;
     }
 
 
+    /**
+     * 获取一个姓氏
+     * @return string
+     */
+    public function getLastName(): string
+    {
+        return $this->lastNames[mt_rand(0, $this->lastNamesLength - 1)];
+    }
+
+
+    /**
+     * 主流姓氏
+     * @var array|string[]
+     */
     protected array $lastNames = [
         '赵',
         '钱',

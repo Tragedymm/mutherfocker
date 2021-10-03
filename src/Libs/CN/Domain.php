@@ -3,12 +3,12 @@
 namespace Tragedy\Mutherfocker\Libs\CN;
 
 
-class City
+class Domain
 {
-    protected static ?City $instance = null;
+    protected static ?Domain $instance = null;
 
 
-    public static function getInstance(): City
+    public static function getInstance(): Domain
     {
         if (static::$instance === null) {
             static::$instance = new static();
