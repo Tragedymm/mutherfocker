@@ -1,0 +1,19 @@
+{
+    "name": "tragedy/mutherfocker",
+    "description": "\"The implements for generating random data(cn or en).\"",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tragedy\\Mutherfocker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tragedymm",
+            "email": "tragedy_mm@outlook.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
