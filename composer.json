@@ -1,6 +1,6 @@
 {
     "name": "tragedy/mutherfocker",
-    "description": "\"The implements for generating random data(cn or en).\"",
+    "description": "\"The implements for generating random data(cn, jp or en).\"",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -15,5 +15,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php": "^8.0"
+    }
 }
