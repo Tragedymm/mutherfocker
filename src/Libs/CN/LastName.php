@@ -1,4 +1,8 @@
 <?php
+/**
+ * 资料来源
+ * https://www.mps.gov.cn/n2253534/n2253535/c7725981/content.html
+ */
 
 namespace Tragedy\Mutherfocker\Libs\CN;
 
@@ -21,11 +25,14 @@ class LastName
 
     /**
      * 获取一个姓氏
+     * 根据姓氏排名设定概率
      * @return string
      */
     public function getLastName(): string
     {
-        return $this->lastNames[mt_rand(0, $this->lastNamesLength - 1)];
+        $y = mt_rand(0, ($this->lastNamesLength + 1) * $this->lastNamesLength / 2 - 1);
+        $x = $this->lastNamesLength - 1 - (int)((sqrt(1 + 8 * $y) - 1) / 2);
+        return $this->lastNames[$x];
     }
 
 

@@ -15,4 +15,19 @@ class FirstName
         }
         return static::$instance;
     }
+
+
+    protected array $maleFirstName = [
+
+    ];
+
+    protected array $FemaleFirstName = [
+
+    ];
+
+
+    public function getFemaleFirstName()
+    {
+
+    }
 }

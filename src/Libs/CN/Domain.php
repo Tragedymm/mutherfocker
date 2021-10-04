@@ -15,4 +15,7 @@ class Domain
         }
         return static::$instance;
     }
+
+
+    protected array $suffixes = [];
 }
